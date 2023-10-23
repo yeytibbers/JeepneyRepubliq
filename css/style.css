@@ -521,6 +521,11 @@ ul.social_icon li a.google:after {
   background: #dd4b39;
   border: 1px solid #dd4b39;
 }
+ul.social_icon li.black a.instagram:after,
+ul.social_icon li a.instagram:after {
+  background: #d62976;
+  border: 1px solid #d62976;
+}
 ul.social_icon li.black a:hover,
 ul.social_icon li.black a:focus,
 ul.social_icon li a:hover,
