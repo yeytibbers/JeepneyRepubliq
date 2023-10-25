@@ -2278,9 +2278,10 @@ form.callus .btn-submit:hover {
   background: url(../images/cityjeepTra.png) no-repeat;
   background-position: right;
   padding-right: 200px;
+  padding-bottom: 300px;
 }
 .order_section {
-  background: url(../images/order-bg.jpg) no-repeat fixed;
+  background: url(../images/order-bg.png) no-repeat fixed;
   background-position: center center;
 }
 .order_section h2,
@@ -2294,7 +2295,7 @@ form.callus .btn-submit:hover {
   padding-top: 0%;
 }
 .paralax {
-  background: url(../images/paralax.jpg) no-repeat fixed;
+  background: url(../images/BACK.png) no-repeat fixed;
   padding: 6% 0;
   background-size: cover;
   background-position: center center;
