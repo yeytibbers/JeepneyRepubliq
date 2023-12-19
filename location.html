@@ -159,7 +159,7 @@
                       type="text"
                       name="f_name"
                       id="f_name"
-                      placeholder="First Name"
+                      placeholder="First Name*"
                       required
                     />
                   </div>
@@ -171,7 +171,7 @@
                       type="text"
                       name="l_name"
                       id="l_name"
-                      placeholder="Last Name"
+                      placeholder="Last Name*"
                       required
                     />
                   </div>
@@ -183,7 +183,7 @@
                       type="email"
                       name="email"
                       id="email"
-                      placeholder="Email Address"
+                      placeholder="Email Address*"
                       required
                     />
                   </div>
@@ -196,14 +196,14 @@
                       name="phone"
                       id="phone"
                       required
-                      placeholder="Phone No"
+                      placeholder="Phone No*"
                     />
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <textarea
-                      placeholder="Message"
+                      placeholder="Message*"
                       name="message"
                       id="message"
                     ></textarea>
@@ -213,13 +213,19 @@
                       <input
                         type="submit"
                         value="Submit Request"
-                        id="btn_contact_submit"
+                        
                       />
                     </div>
                   </div>
                 </div>
               </div>
             </form>
+
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="script.js"></script>
+
+
           </div>
           <div class="col-md-4 col-sm-4 bistro">
             <h2 class="heading">Jeepney RePubLiq</h2>
