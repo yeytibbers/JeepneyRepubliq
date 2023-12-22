@@ -13,27 +13,26 @@ function sendEmail() {
   Email.send({
     SecureToken: "9c94077e-6a87-4211-8ac1-afd5cac35b96",
     To: "jeepneyrepubliq@gmail.com",
-    From: email.value,
+    From: "jeepneyrepubliq@gmail.com",
     Subject: "JeepneyRepubliqWebsiteEmail",
     Body: bodyMessage
   }).then(
-  message => alert(message)
-  );
-}
+    message => {
+      if (message == "OK"){
+        Swal.fire({
+          title: "Success!",
+          text: "Message successfuly sent!",
+          icon: "success"
+        });
+      }
 
-/*
-Email.send({
-  Host : "smtp.elasticemail.com",
-  Username : "jeepneyrepubliq@gmail.com",
-  Password : "8E92CDA100F6BE70B669FEB8F3519C9E61EF",
-  To : 'jeepneyrepubliq@gmail.com',
-  From : "jeepneyrepubliq@gmail.com",
-  Subject : "This is the subject",
-  Body : "And this is the body"
-}).then(
-message => alert(message)
-);
-*/
+      else {
+        alert(message)
+      }
+    }
+    );
+  }
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
