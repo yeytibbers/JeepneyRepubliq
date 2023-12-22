@@ -3,6 +3,7 @@ const firstName = document.getElementById("f_name");
 const lastName = document.getElementById("l_name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
 
 function sendEmail() {
@@ -10,28 +11,35 @@ function sendEmail() {
   Message: ${mess.value}`;
 
   Email.send({
-    SecureToken: "54b9f954-27e3-49dc-a70d-a54edf578b0a",
+    SecureToken: "9c94077e-6a87-4211-8ac1-afd5cac35b96",
     To: "jeepneyrepubliq@gmail.com",
-    From: "jeepneyrepubliq@gmail.com",
+    From: email.value,
+    Subject: "JeepneyRepubliqWebsiteEmail",
     Body: bodyMessage
   }).then(
-  message => {
-    if (message == "OK"){
-      Swal.fire({
-        title: "Success!",
-        text: "Message successfuly sent!",
-        icon: "success"
-      });
-    }
-  }
+  message => alert(message)
   );
 }
 
+/*
+Email.send({
+  Host : "smtp.elasticemail.com",
+  Username : "jeepneyrepubliq@gmail.com",
+  Password : "8E92CDA100F6BE70B669FEB8F3519C9E61EF",
+  To : 'jeepneyrepubliq@gmail.com',
+  From : "jeepneyrepubliq@gmail.com",
+  Subject : "This is the subject",
+  Body : "And this is the body"
+}).then(
+message => alert(message)
+);
+*/
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();
 
-  if (!firstName.classList.contains("error") && !lastName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !mess.classList.contains("error")) {
+  if (!firstName.classList.contains("error") && !lastName.classList.contains("error") && 
+  !email.classList.contains("error") && !phone.classList.contains("error") && !mess.classList.contains("error")) {
       sendEmail();
   }
 
